@@ -1,0 +1,182 @@
+@import "../../../mixins.scss";
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #000000;
+    color: white;
+    padding: 0.5rem 1rem 0 1rem;
+    height: 4rem;
+    // position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    @include md{
+        height: 6.4rem;
+        position: fixed;
+    
+    }
+
+    .left{
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+        .mobilemenu{
+            cursor: pointer;
+            margin-right: 10px;
+            margin-left: 13px;
+            @include md{
+                display: none;
+            }
+        }    
+       .logolink{
+            // display: none;
+            @include md{
+                display: block;
+            }
+            margin-left: 1.5rem;
+            .dlogo{
+                height: 2rem;
+                display: none;
+                @include md{
+                    display: block;
+                }
+            }
+            .mlogo{
+                // display: none;
+                height: 20px;
+                margin-right: 10px;
+                @include md{
+                    display: none;
+                }
+            }
+       } 
+    }
+    .center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2.6rem;
+        :focus-within{
+            border: 1px solid blue;
+            border-bottom-left-radius: 10rem;
+            border-top-left-radius: 10rem;
+            
+
+        }
+        @include md{
+            height: 4rem;
+            width: 64.4rem;
+            
+        }
+        .inputSearch{
+            display: flex;
+            width: 80%;
+            height: 100%;
+            align-items: center;
+            :focus-within{
+                border: 0;
+                outline: 0;
+                visibility: visible;
+            } 
+            @include md{
+                width: 83.85%;
+            }
+            .logo{
+                display: none;
+                align-items: center;
+                justify-content: space-evenly;
+                height: 100%;
+                svg{
+                    width: 2rem;
+                }                 
+                @include md{
+                    display: flex;
+                    width: 2.4rem;
+                    margin: 0 1rem;
+                }
+            }
+            input{
+                width: 100%;
+                height:100%;
+                padding: 1px 0;
+                font-size: 1.6rem;
+                outline: 0;
+                border: 0;
+                color: white;
+                background: #000;
+                font-size: 1.4rem;
+                padding-left: 1rem;
+                border: 1px solid rgb(103, 100, 99);
+                border-bottom-left-radius: 10rem;
+                border-top-left-radius: 10rem;
+                
+                @include md{
+                    font-size: 1.8rem;
+
+                }
+               
+               
+            }
+        }
+        button{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 3rem;
+            height: 100%;
+            border: 1px solid rgb(103, 100, 99);
+            border-left: none;
+            border-top-right-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.66);
+            background: #303030;
+            @include md{
+                width:6rem;
+            }
+            
+
+        }
+    }
+    .right{
+        display: flex;
+        align-items: center;
+        .righticons{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-right: 1rem;
+            height: 100%;
+            :hover{
+                background: #303030;
+                border-radius: 80%;
+            }
+            div{
+                padding: 1rem;
+                margin-left: 1rem;
+                cursor: pointer;
+                display: none;
+                @include md{
+                    display: flex;
+                }
+            }
+        }
+        div{
+            display: none;
+            @include md{
+                display: flex;
+            }
+            img{
+                cursor: pointer;
+                margin-right: 1rem;
+               
+            }
+        }
+    }
+}
+
+.dlogo{
+    height: 20px;
+}

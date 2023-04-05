@@ -1,0 +1,42 @@
+@import "../../../../mixins.scss";
+.videoDetails{
+    .content{
+        .profileImg{
+            img{
+                width: 3.6rem;
+                border-radius: 100%;
+            }
+        }
+        .textInfo{
+            margin-left: .4rem;
+            // display: flex;
+            .title{
+                font-size: 1.6rem;
+                line-height: 2.2rem;
+                font-weight: 500;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: normal;
+                max-height: 4.4rem;
+                color: #f1f1f1;
+            }
+            .name{
+                font-size: 1.4rem;
+                color: #aaaaaa;
+            }
+            .viewsandYear{
+                font-size: 1.4rem;
+                color: #aaaaaa;
+                display: flex;
+                div{
+                    padding-right: 1rem;
+                }
+                .dot{
+                   font-weight: 700;
+                   
+                }
+            }
+            
+        }
+    }
+}
