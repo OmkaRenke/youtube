@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import "./leftnav.scss"
 import { Context } from '../../../context/contextApi'
 import LeftNavbarMenuItem from "./LeftNavbarMenuItem"
@@ -12,7 +12,7 @@ import { ImNewspaper } from "react-icons/im";
 import { GiDiamondTrophy, GiEclipse } from "react-icons/gi";
 import { RiLightbulbLine, RiFeedbackLine } from "react-icons/ri";
 import { FiSettings, FiHelpCircle } from "react-icons/fi";
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const categories = [
     { name: "New", icon:<AiFillHome size={"20px"}/>, type: "home"},
@@ -53,6 +53,7 @@ const LeftNav = () => {
 			break;
 	}
   }
+  
   return (
   <div className={`maincontainerBox ${mobileMenu ? "mobilemenuview":""}`}>
       {categories.map((item,index)=><LeftNavbarMenuItem key={index}

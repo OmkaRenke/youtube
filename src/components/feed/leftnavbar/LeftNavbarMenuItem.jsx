@@ -1,11 +1,14 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import "./LeftNavbarMenuItem.scss"
 import { Context } from '../../../context/contextApi'
+import { useLocation } from 'react-router-dom'
 const LeftNavbarMenuItem = ({text,handleCategorychange,data,className}) => {
  const {mobileMenu,setMobileMenu} =useContext(Context)
  const handleclick=()=>{
-  setMobileMenu(!mobileMenu)
+  setMobileMenu(false)
  }
+ const loaction=useLocation
+  useEffect(()=>{window.scrollTo(0,0)},[loaction])
   return (
     <div className={`menuItems ${mobileMenu ? "m":""}`} onClick={handleclick}>
       <div className={`menuitem ${className}`}

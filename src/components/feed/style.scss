@@ -1,7 +1,7 @@
 @import "../../../mixins.scss";
 
 .maincontainer{
-    padding-top: 2rem;
+    padding-top: 4rem;
     @include md{
         margin-top: 7rem;
         padding-top: 0;
@@ -49,6 +49,8 @@
             .videoSection{
                 display: grid;
                 grid-template-columns: 1fr;
+                // grid-template-columns: repeat(auto-fit,1fr);
+                // gap: 0,1rem;
                 cursor: pointer;
                 @include md{
                     grid-template-columns: repeat(3,1fr);

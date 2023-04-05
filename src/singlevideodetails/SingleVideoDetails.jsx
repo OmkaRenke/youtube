@@ -62,6 +62,7 @@ const SingleVideoDetails = () => {
             <div className="singleVideoPlay">
               <ReactPlayer 
                 url={`https://www.youtube.com/watch?v=${id}`}
+                playing={true}
                 controls
                 width={"100%"}
                 style={{ backgroundColor: "#000000" }}

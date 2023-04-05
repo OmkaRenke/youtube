@@ -2,7 +2,7 @@
 
 
 .main-container{
-    padding-top: 2rem;
+    padding-top: 4rem;
     @include md{
         margin-top: 7rem;
         padding-top: 0;
@@ -81,6 +81,7 @@
                         }
                     }
                     .detailss{
+                       
                         padding-left: 1rem;
                         .video-Details{
                                @include md{

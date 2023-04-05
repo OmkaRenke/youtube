@@ -1,7 +1,7 @@
 @import "../../mixins.scss";
 
 .maindiv{
-   
+   margin-top: 5rem;
     @include md{
         margin-top: 7rem;
         color: white;
@@ -229,6 +229,7 @@
                             cursor: pointer;
                             font-size: 1.2rem;
                             margin-top: 3rem;
+                            line-height: 2.5rem;
                             
                             @include md{
                                 margin: 1rem;
@@ -245,6 +246,7 @@
                             .description{
                                 max-height: 2rem;
                                 overflow: hidden;
+
                             }
                             &.more{
                                 max-height: 0;
