@@ -1,41 +1,44 @@
 @import "../../../../mixins.scss";
 
-.menuItems{
-    width: 20rem;
-    // padding: 0 1.2rem;
-    transform: translateX(-100%);
-    transition: all 0.2s ease;
-    @include md{
-        width: 19rem;
-        transform: translateX(0);
+.menuItems {
+  width: 20rem;
+  // padding: 0 1.2rem;
+  transform: translateX(-100%);
+  transition: all 0.2s ease;
+  @include md {
+    // width: 19rem;
+    transform: translateX(0);
+    padding-right: 1rem;
+  }
 
-    }
+  .menuitem {
+    display: flex;
+    align-items: center;
+    padding: 0 1.2rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    height: 4rem;
 
-    .menuitem{
-        display: flex; 
-        align-items: center;
-        padding: 0 1.2rem;
-        margin-left: 1rem;
-        cursor: pointer;
-        height: 4rem;
-        
-        &:hover{
-            background: #4a3d3d8e;
-            border-radius: 10px;
-        }
-        .name{
-            font-size: 1.4rem;
-            margin-left: 2rem;
-        }
+    &:hover {
+      background: #4a3d3d8e;
+      border-radius: 10px;
     }
-    .selected{
-        background: #4a3d3d8e;
-        border-radius: 1rem;
+    .name {
+      font-size: 1.4rem;
+      margin-left: 2rem;
     }
-    hr{
-        margin:1rem;
+  }
+  .selected {
+    background: #4a3d3d8e;
+    border-radius: 1rem;
+  }
+  hr {
+    margin: 1rem;
+  }
+  &.m {
+    transform: translateX(0);
+    &:nth-last-child(1) {
+      margin-bottom: 6rem;
     }
-    &.m{
-        transform: translateX(0);
-    }
+  }
 }

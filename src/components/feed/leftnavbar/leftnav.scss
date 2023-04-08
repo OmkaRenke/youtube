@@ -1,23 +1,23 @@
 @import "../../../../mixins.scss";
 
-.maincontainerBox{
-    color: white;
-    background: #000;
-    transform: translateX(-100%);
+.maincontainerBox {
+  color: white;
+  background: #000;
+  transform: translateX(-100%);
+  //   margin-bottom: 30rem;
 
-    @include md{
-        transform: translate(0);
-       
-    }
+  @include md {
+    transform: translate(0);
+  }
 }
-.mobilemenuview{
-    transform: translateX(0);
-    transition: all 0.3s ease-in-out;
-    // position: absolute;
-    z-index: 3;
-    // height: 100vh;
-    position: fixed;
-    overflow-y: scroll;
-    left: 0;
-    height: 100%;
+.mobilemenuview {
+  transform: translateX(0);
+  transition: all 0.3s ease-in-out;
+  // position: absolute;
+  z-index: 3;
+  // height: 100vh;
+  position: fixed;
+  overflow-y: scroll;
+  left: 0;
+  height: 100%;
 }
