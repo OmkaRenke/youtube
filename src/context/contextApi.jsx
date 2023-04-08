@@ -14,9 +14,9 @@ const AppContext = (props) => {
 
   const fetchCategoryDataApi = (endpoint) => {
     setLoding(true);
-    fetchDataFromApi(`search/?q=${endpoint}`).then(({ contents }) => {
+    fetchDataFromApi(`search/?q=${endpoint}`).then((data) => {
       // console.log(contents)
-      setSearchResults(contents);
+      setSearchResults(data?.contents);
       setLoding(false);
     });
   };

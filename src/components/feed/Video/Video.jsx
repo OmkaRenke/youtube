@@ -17,7 +17,7 @@ const Video = ({ video }) => {
           <img src={video?.thumbnails[1]?.url} alt="" className="img" />
         </div>
         <div className="time">
-          {video && <VideoLength time={video?.lengthSeconds} />}
+          {!!video && video && <VideoLength time={video?.lengthSeconds} />}
         </div>
       </div>
       <div className="details">

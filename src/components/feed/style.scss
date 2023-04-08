@@ -1,72 +1,67 @@
 @import "../../../mixins.scss";
 
-.maincontainer{
-    padding-top: 4rem;
-    @include md{
-        margin-top: 7rem;
-        padding-top: 0;
-    }
-    .content{
+.maincontainer {
+  padding-top: 4rem;
+  @include md {
+    margin-top: 7rem;
+    padding-top: 0;
+  }
+  .content {
+    display: flex;
+
+    .leftnavbarContent {
+      // display: block;
+      position: absolute;
+      width: 22.4rem;
+      // z-index: 1;
+      // transform: translateX(-100%);
+
+      @include md {
         display: flex;
-       
-        .leftnavbarContent{
-            // display: block;
-            position: absolute;
-            width: 22.4rem;
-            // z-index: 1;
-            // transform: translateX(-100%);
-            
-            
-            @include md{
-                display: flex;
-                position: relative;
-                
-                
-            }
-            .scroll-div{
-                width: 0;
-                height: 100vh;
-                @include md{
-                height: 50rem;
-                width: 20rem;
-                overflow: hidden;
-                overflow-y: scroll;
-                position: fixed;
-                z-index: 2;
-                }
-                
-            }
+        position: relative;
+      }
+      .scroll-div {
+        width: 0;
+        height: 100vh;
+        @include md {
+          height: 50rem;
+          width: 20rem;
+          overflow: hidden;
+          overflow-y: scroll;
+          position: fixed;
+          z-index: 2;
         }
-        
-        .allvideos{
-            background: #000;
-            margin: 0 auto;
-            padding: auto;
-            z-index: 2;
-            @include md{
-                width: calc(100% - 22.4rem);
-            }
-            .videoSection{
-                display: grid;
-                grid-template-columns: 1fr;
-                // grid-template-columns: repeat(auto-fit,1fr);
-                // gap: 0,1rem;
-                cursor: pointer;
-                @include md{
-                    grid-template-columns: repeat(3,1fr);
-                }
-            }
-        }
+      }
     }
+
+    .allvideos {
+      background: #000;
+      margin: 0 auto;
+      padding: auto;
+      z-index: 2;
+      @include md {
+        width: calc(100% - 22.4rem);
+      }
+      .videoSection {
+        display: grid;
+        grid-template-columns: 1fr;
+        // grid-template-columns: repeat(auto-fit,1fr);
+        // gap: 0,1rem;
+        cursor: pointer;
+        @include md {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    }
+  }
 }
-::-webkit-scrollbar-track{
-    background: #000000;
+::-webkit-scrollbar-track {
+  background: #000000;
 }
-::-webkit-scrollbar{
-    width: 5px;
-    
+::-webkit-scrollbar {
+  width: 5px;
 }
-::-webkit-scrollbar-thumb{
-    background: #717171;
-    border-radius: 100vw;
+::-webkit-scrollbar-thumb {
+  background: #717171;
+  border-radius: 100vw;
 }

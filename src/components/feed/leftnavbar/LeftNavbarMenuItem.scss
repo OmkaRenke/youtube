@@ -20,7 +20,7 @@
     height: 4rem;
 
     &:hover {
-      background: #4a3d3d8e;
+      background: var(--blackLight);
       border-radius: 10px;
     }
     .name {
@@ -29,7 +29,7 @@
     }
   }
   .selected {
-    background: #4a3d3d8e;
+    background: var(--blackLight);
     border-radius: 1rem;
   }
   hr {

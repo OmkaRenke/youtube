@@ -1,186 +1,144 @@
 @import "../../../mixins.scss";
 
+.main-container {
+  padding-top: 6rem;
+  @include md {
+    margin-top: 7rem;
+    padding-top: 0;
+  }
+  .con-tent {
+    display: flex;
+    .left-navbar-Content {
+      // display: block;
+      position: absolute;
+      width: 22.4rem;
+      z-index: 1;
 
-.main-container{
-    padding-top: 4rem;
-    @include md{
-        margin-top: 7rem;
-        padding-top: 0;
-    }
-    .con-tent{
+      @include md {
         display: flex;
-       
-        .left-navbar-Content{
-            // display: block;
-            position: absolute;
-            width: 22.4rem;
-            z-index: 1;
-            
-            @include md{
-                display: flex;
-                position: relative;
-                .scrolldiv{
-                    width: 0;
-                    @include md{
-                    height: 50rem;
-                    width: 20rem;
-                    overflow: hidden;
-                    overflow-y: scroll;
-                    position: fixed;
-                    z-index: 2;
-                    }
-                    
-                }
-            }
+        position: relative;
+        .scrolldiv {
+          width: 0;
+          @include md {
+            height: 50rem;
+            width: 20rem;
+            overflow: hidden;
+            overflow-y: scroll;
+            position: fixed;
+            z-index: 2;
+          }
         }
-        
-        .all-videos{
-            background: #000;
-            margin: 0 auto;
-            padding: auto;
-            width: 30rem;
-            @include md{
-                width: calc(100% - 22.4rem);
-            }
-            .video-Section{
-                display: grid;
-                grid-template-columns: 1fr;
-                cursor: pointer;
-                // padding: 10px 10px;
-                .all-content{
-                    display: flex;
-                    flex-direction: column;
-                    color: #f1f1f1;
-                    margin-bottom: 1rem;
-                    @include md{
-                        width:110rem ;
-                        flex-direction: row;
-                        transition: all ease-in-out 0.3s;
-                        padding: 10px;
-                        &:hover{
-                            background: #69696983;
-                            border-radius: 10px;
-                        }
-                    }
-
-
-                    .cont-ent{
-                        padding: 0 10px;
-                        .thum-bnail{
-                            
-                            @include md{
-                                width: 36rem;
-                                height: 20rem;
-                            }
-                            img{
-                                width: 100%;
-                                border-radius: 10px;
-                               
-                            }
-                            
-                        }
-                    }
-                    .detailss{
-                       
-                        padding-left: 1rem;
-                        .video-Details{
-                               @include md{
-                                display: flex;
-                                // width: 56rem;
-                                flex-direction: column;
-                                align-items: baseline;
-                               }
-        
-                                .text-Info{
-                                   @include md{
-                                    margin-bottom: 3rem;
-                                   }
-                                    .views-and-Year{
-                                        font-size: 1.2rem;
-                                        display: flex;
-                                    }
-                                    .tit-le{
-                                        font-size: 1.6rem;
-                                    }
-                                }
-                                .profile-Img{
-                                    img{
-                                        border-radius: 100vw;
-                                        width: 6rem;
-                                        display: none;
-                                        @include md{
-                                            display: block;
-                                        }
-                                    }
-                                   @include md{
-                                    margin-bottom: 3rem;
-                                    
-                                   }
-                                    .na-me{
-                                        font-size: 1.2rem;
-                                    }
-                                }
-                                .descrip-tion{
-                                    font-size: 1.2rem;
-                                    width: 100%;
-                                    display: none;
-                                    @include md{
-                                        display: block;
-                                    }
-                                }
-                            }
-                        
-                    }
-                }
-            }
-        }
+      }
     }
+
+    .all-videos {
+      background: #000;
+      margin: 0 auto;
+      padding: auto;
+      width: 33rem;
+      @include md {
+        width: calc(100% - 22.4rem);
+      }
+      .video-Section {
+        display: grid;
+        grid-template-columns: 1fr;
+        cursor: pointer;
+        // padding: 10px 10px;
+        .all-content {
+          display: flex;
+          flex-direction: column;
+          color: #f1f1f1;
+          margin-bottom: 1rem;
+          @include md {
+            width: 100rem;
+            flex-direction: row;
+            transition: all ease-in-out 0.3s;
+            padding: 1rem 0;
+            &:hover {
+              background: var(--blackLight);
+              border-radius: 10px;
+            }
+          }
+
+          .cont-ent {
+            padding: 0 10px;
+            .thum-bnail {
+              @include md {
+                width: 36rem;
+                height: 20rem;
+              }
+              img {
+                width: 100%;
+                border-radius: 10px;
+              }
+            }
+          }
+          .detailss {
+            padding-left: 1rem;
+            @include md {
+              height: 20rem;
+            }
+            .video-Details {
+              @include md {
+                display: flex;
+                // width: 56rem;
+                flex-direction: column;
+                // align-items: baseline;
+              }
+
+              .text-Info {
+                @include md {
+                  margin-bottom: 1rem;
+                }
+                .views-and-Year {
+                  font-size: 1.2rem;
+                  display: flex;
+                }
+                .tit-le {
+                  font-size: 1.6rem;
+                }
+              }
+              .profile-Img {
+                img {
+                  border-radius: 100vw;
+                  width: 6rem;
+                  display: none;
+                  @include md {
+                    display: block;
+                  }
+                }
+                @include md {
+                  margin-bottom: 3rem;
+                }
+                .na-me {
+                  font-size: 1.2rem;
+                }
+              }
+              .descrip-tion {
+                font-size: 1.2rem;
+                width: 100%;
+                display: none;
+                @include md {
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
-::-webkit-scrollbar-track{
-    background: #000000;
+::-webkit-scrollbar-track {
+  background: #000000;
 }
-::-webkit-scrollbar{
-    width: 5px;
-    
+::-webkit-scrollbar {
+  width: 5px;
 }
-::-webkit-scrollbar-thumb{
-    background: #717171;
-    border-radius: 100vw;
+::-webkit-scrollbar-thumb {
+  background: #717171;
+  border-radius: 100vw;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // .container{
 //     display: flex;
@@ -196,11 +154,11 @@
 //             width: 22.4rem;
 //             z-index: 1;
 //             height: 100%;
-            
+
 //             @include md{
 //                 display: flex;
 //                 position: relative;
-                
+
 //                 .scroll-div{
 //                     width: 0;
 //                     @include md{
@@ -211,7 +169,7 @@
 //                     position: fixed;
 //                     z-index: 2;
 //                     }
-                    
+
 //                 }
 //             }
 //     }
@@ -234,7 +192,7 @@
 //             border-radius: 3px;
 //         }
 //             .content{
-               
+
 //                 .thumbnail{
 //                     width: 28rem;
 //                     height: 16rem;
@@ -250,7 +208,7 @@
 //                     }
 //                 }
 //             }
-            
+
 //        }
 //     }
 // }

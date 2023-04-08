@@ -18,12 +18,11 @@ const Header = () => {
   const navigate = useNavigate();
   const searchQueryHandler = (e) => {
     if (
-      (e?.key === "Enter" || e === "searchButton") &&
+      (e?.key === "Enter" || e === "searchButton" || e.type === "click") &&
       searchQuery.length > 0
     ) {
       navigate(`searchResult/${searchQuery}`);
       setSearchQuery("");
-      console.log(e);
     }
   };
   const mobileMenuToggle = () => {
@@ -33,7 +32,7 @@ const Header = () => {
   const pageName = pathname.split("/").filter(Boolean)?.[0];
   return (
     <div className="header">
-      {/* {loading && <Loader />} */}
+      {loading && <Loader />}
       <div className="left">
         {pageName !== "video" && (
           <div className="mobilemenu" onClick={mobileMenuToggle}>
@@ -61,8 +60,8 @@ const Header = () => {
             onKeyUp={searchQueryHandler}
           />
         </div>
-        <button>
-          <IoIosSearch onClick={searchQueryHandler} />
+        <button onClick={searchQueryHandler}>
+          <IoIosSearch />
         </button>
       </div>
       <div className="right">

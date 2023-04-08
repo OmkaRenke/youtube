@@ -1,360 +1,338 @@
 @import "../../mixins.scss";
 
-.maindiv{
-   margin-top: 5rem;
-    @include md{
-        margin-top: 7rem;
-        color: white;
+.maindiv {
+  margin-top: 5rem;
+  @include md {
+    margin-top: 7rem;
+    color: white;
 
-        padding-top: 2.4rem;
+    padding-top: 2.4rem;
+  }
+  .content {
+    .video {
+      display: flex;
+      flex-direction: column;
 
-    }
-    .content{
-        .video{
-            display: flex;
-            flex-direction: column;
-           
-            @include md{
-                flex-direction: row;
-
-            }
-            .singleVideoPlay{
-                @include md{
-                position: fixed;
-                overflow-y: scroll;
-                height: 50rem;
-                width: 75rem;
-                padding-right: 2.4rem;
-                }
-
-                .videoDetails{
-                    .details{
-                        .videoTitle{
-                            font-size: 1.5rem;
-                            color: #f1f1f1;
-                            padding-left: 1rem;
-                            @include md{
-                                font-size: 2rem;
-                                padding-left: 0;
-                            }
-                        }
-                        .channelDetails{
-                            display: flex;
-                            height: 5.5rem;
-                            flex-direction: column;
-                            margin-top: 1rem;
-                            margin-bottom: 1rem;
-                            color: #ffffff;
-                            @include md{
-                                justify-content: space-between;
-                                align-items: center;
-                                padding: 0 .5rem;
-                                flex-direction: row;
-                            }
-                            .left{
-                                display: flex;
-                                align-items: center;
-                                justify-content: space-around;
-                                @include md{
-                                    // justify-content: flex-start;
-                                    // width: 26rem;
-                                }
-                                .profile{
-                                    width: 3rem;
-                                   @include md{
-                                    width: 4rem;
-                                    margin-right: 1.5rem;
-                                   }
-                                    img{
-                                        width: 100%;
-                                        border-radius: 100%;
-                                    }
-                                }
-                                .nameSubcriberNum{
-                                    font-size: 1.4rem;
-                                    max-width: 100%;
-                                    @include md{
-                                        margin: 0 1rem;
-                                    }
-                                    .title{
-                                        font-size: 1.4rem;
-                                       
-                                    }
-                                    .number{
-                                        font-size: 1.2rem;
-                                    }
-                                    @include md{
-                                        font-size: 1.6rem;
-                                        margin-right: 1.5rem;
-                                       
-   
-                                    }
-                                   
-                                }
-                                
-                                .subscribebtn{
-                                    margin-left: 0;
-                                    background: #ffffff;
-                                    color: #000000;
-                                    outline: 0;
-                                    height: 3rem;
-                                    width: 8rem;
-                                    font-size: 1.2rem;
-                                    cursor: pointer;
-                                    border: 1px solid rgb(255, 255, 255);
-                                    border-radius: 2rem;
-                                    transition: all ease-in-out 0.1s;
-                                    &:hover{
-                                        opacity: 0.6;
-                                    }
-                                   
-                                    
-                                }
-                                .sub{
-                                    background: #4b4b4b;
-                                    color: #ffffff;
-                                    border: 0;
-                                }
-                            }
-                            .right{
-                                display: flex;
-                                align-items: center;
-                                margin-top: 1rem;
-                                justify-content: space-around;
-                                @include md{
-                                    justify-content: center;
-                                    margin-top: 0;
-                                }
-                                .likesection{
-                                    width: 12rem;
-                                    height: 3rem;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: space-evenly;
-                                    background: #575353;
-                                    border-radius: 100vw;
-                                    margin-right: 1rem;
-
-                                    .likeNum{
-                                        display: flex;
-                                        align-items: center;
-                                        height: 100%;
-                                        cursor: pointer;
-                                        .likeCount{
-                                            font-size: 1.2rem;
-                                        }
-                                        .likebtn{
-                                            padding-left: 1rem;
-                                        }
-                                        &:hover{
-                                            opacity: 0.5;
-                                        }
-
-                                    }
-                                    .dislike{
-                                        display: flex;
-                                        align-items: center;
-                                        height: 100%;
-                                        cursor: pointer;
-                                        &:hover{
-                                            opacity: 0.5;
-                                        }
-                                    }
-                                    hr{
-                                        height: 90%;
-                                    }
-
-                                    
-                                }
-                                .share{
-                                   margin-left: 5rem;
-                                   padding-right: 1rem;
-                                   @include md{
-                                    margin-right: 2rem;
-                                    margin-left: 0;
-                                    padding-right: 0;
-                                    width: 8rem;
-                                   }
-                                    .sharebtn{
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: space-evenly;
-                                        background: #ffffff;
-                                        color: #000000;
-                                        outline: 0;
-                                        height: 3rem;
-                                        width: 100%;
-                                        padding: 0 0.5rem;
-                                        cursor: pointer;
-                                        font-size: 1.2rem;
-                                        border: 1px solid rgb(255, 255, 255);
-                                        border-radius: 100vw;
-                                        transition: all ease-in-out 0.1s;
-                                        @include md {
-                                            font-size: 1.6rem;
-                                        }
-                                        &:hover{
-                                            opacity: 0.6;
-                                        }
-
-                                    }
-                                    
-                                }
-                                .threedots{
-                                    cursor: pointer;
-                                    color: #ffffff;
-                                    display: none;
-
-                                    @include md{
-                                        display: flex;
-                                        justify-content: center;
-                                        align-items: center;
-                                        height: 3rem;
-                                        width: 3rem;
-                                        transition: all ease-in-out 0.3s;
-                                        &:hover{
-                                            background: #757575;
-                                            border-radius: 100vw;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        .textContent{
-                            color: white;
-                            margin-bottom: 2rem;
-                            background: #3d3c3c;
-                            padding: 1rem ;
-                            border-radius: 10px;
-                            cursor: pointer;
-                            font-size: 1.2rem;
-                            margin-top: 3rem;
-                            line-height: 2.5rem;
-                            
-                            @include md{
-                                margin: 1rem;
-                                font-size: 1.4rem;
-                                margin-top: 0;
-                            }
-                            .numberdayviews{
-                                font-size: 1.5rem;
-                                margin-bottom: 1rem;
-                                .views{
-                                    margin-right: 1rem;
-                                }
-                            }
-                            .description{
-                                max-height: 2rem;
-                                overflow: hidden;
-
-                            }
-                            &.more{
-                                max-height: 0;
-                                overflow: 0;
-                            }
-                            .showBtn{
-                                background: #ffffff;
-                                color: #000000;
-                                outline: 0;
-                                height: 2rem;
-                                padding: 0 0.5rem;
-                                cursor: pointer;
-                                font-size: 1.4rem;
-                                border: 1px solid rgb(255, 255, 255);
-                                border-radius: 100vw;
-                                margin-top: 1rem;
-                                
-                            }
-                        }
-                    }
-                }
-            }
-            .relatedVideos{
- 
-                @include md{
-                margin-left: 75rem;
-                width: 50rem;
-                padding-right: 2.4rem;
-
-                }
-                .allcontent{
-                    width: 100%;
-                    @include md{
-                        display: flex;
-                    }
-                    .content{
-                        @include md{
-                            // width: 75%;
-                            height: 8rem;
-                            width: 20rem;
-                            margin-bottom: 3rem;
-                        }
-                        .thumbnail{
-                            @include md{
-                                
-                                // width: 100%;
-                            }
-                            .img{
-                                @include md{
-                                    height: 100%;
-                                }
-                            }
-                        }
-                        .time{
-                            font-size: 1rem;
-                            bottom: 1rem;
-                            @include md{
-                                bottom: -3rem;
-                                font-size: 1rem;
-                            }
-                        }
-                    }
-                    .details{
-                        @include md{
-                            width: 25%;
-                           }
-                        .textContent{
-                            .videoDetails{
-                                .content{
-                                    display: flex;
-                                    .profileImg{
-                                        
-                                        @include md{
-                                            display: none;
-                                        }
-                                    }
-                                    .textInfo{
-                                        @include md{
-                                            padding-left: 1rem;
-                                        }
-                                        .title{
-                                            font-size: 1.2rem;
-                                            @include md{
-                                                font-size: 1.4rem;
-
-                                            }
-                                        }
-                                        .name{
-                                            font-size: 1rem;
-                                            @include md{
-                                                font-size: 1.2rem;
-                                            }
-                                        }
-                                        .viewsandYear{
-                                            font-size: 1rem;
-                                            @include md{
-                                                font-size: 1.2rem;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                  
-                }
-                
-            }
+      @include md {
+        flex-direction: row;
+      }
+      .singleVideoPlay {
+        @include md {
+          position: fixed;
+          overflow-y: scroll;
+          height: 50rem;
+          width: 75rem;
+          padding-right: 2.4rem;
         }
+
+        .videoDetails {
+          .details {
+            .videoTitle {
+              font-size: 1.5rem;
+              color: #f1f1f1;
+              padding-left: 1rem;
+              @include md {
+                font-size: 2rem;
+                padding-left: 0;
+              }
+            }
+            .channelDetails {
+              display: flex;
+              height: 5.5rem;
+              flex-direction: column;
+              margin-top: 1rem;
+              margin-bottom: 1rem;
+              color: #ffffff;
+              @include md {
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 0.5rem;
+                flex-direction: row;
+              }
+              .left {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                @include md {
+                  // justify-content: flex-start;
+                  // width: 26rem;
+                }
+                .profile {
+                  width: 3rem;
+                  @include md {
+                    width: 4rem;
+                    margin-right: 1.5rem;
+                  }
+                  img {
+                    width: 100%;
+                    border-radius: 100%;
+                  }
+                }
+                .nameSubcriberNum {
+                  font-size: 1.4rem;
+                  max-width: 100%;
+                  @include md {
+                    margin: 0 1rem;
+                  }
+                  .title {
+                    font-size: 1.4rem;
+                  }
+                  .number {
+                    font-size: 1.2rem;
+                  }
+                  @include md {
+                    font-size: 1.6rem;
+                    margin-right: 1.5rem;
+                  }
+                }
+
+                .subscribebtn {
+                  margin-left: 0;
+                  background: #ffffff;
+                  color: #000000;
+                  outline: 0;
+                  height: 3rem;
+                  width: 8rem;
+                  font-size: 1.2rem;
+                  cursor: pointer;
+                  border: 1px solid rgb(255, 255, 255);
+                  border-radius: 2rem;
+                  transition: all ease-in-out 0.1s;
+                  &:hover {
+                    opacity: 0.6;
+                  }
+                }
+                .sub {
+                  background: var(--blackLight);
+                  color: #ffffff;
+                  border: 0;
+                }
+              }
+              .right {
+                display: flex;
+                align-items: center;
+                margin-top: 1rem;
+                justify-content: space-around;
+                @include md {
+                  justify-content: center;
+                  margin-top: 0;
+                }
+                .likesection {
+                  width: 12rem;
+                  height: 3rem;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-evenly;
+                  background: var(--blackLight);
+                  border-radius: 100vw;
+                  margin-right: 1rem;
+
+                  .likeNum {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    cursor: pointer;
+                    .likeCount {
+                      font-size: 1.2rem;
+                    }
+                    .likebtn {
+                      padding-left: 1rem;
+                    }
+                    &:hover {
+                      opacity: 0.5;
+                    }
+                  }
+                  .dislike {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    cursor: pointer;
+                    &:hover {
+                      opacity: 0.5;
+                    }
+                  }
+                  hr {
+                    height: 90%;
+                  }
+                }
+                .share {
+                  margin-left: 5rem;
+                  padding-right: 1rem;
+                  @include md {
+                    margin-right: 2rem;
+                    margin-left: 0;
+                    padding-right: 0;
+                    width: 8rem;
+                  }
+                  .sharebtn {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    background: #ffffff;
+                    color: #000000;
+                    outline: 0;
+                    height: 3rem;
+                    width: 100%;
+                    padding: 0 0.5rem;
+                    cursor: pointer;
+                    font-size: 1.2rem;
+                    border: 1px solid rgb(255, 255, 255);
+                    border-radius: 100vw;
+                    transition: all ease-in-out 0.1s;
+                    @include md {
+                      font-size: 1.6rem;
+                    }
+                    &:hover {
+                      opacity: 0.6;
+                    }
+                  }
+                }
+                .threedots {
+                  cursor: pointer;
+                  color: #ffffff;
+                  display: none;
+
+                  @include md {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 3rem;
+                    width: 3rem;
+                    transition: all ease-in-out 0.3s;
+                    &:hover {
+                      background: var(--blackLight);
+                      border-radius: 100vw;
+                    }
+                  }
+                }
+              }
+            }
+            .textContent {
+              color: white;
+              margin-bottom: 2rem;
+              background: var(--blackLight);
+              padding: 1rem;
+              border-radius: 10px;
+              cursor: pointer;
+              font-size: 1.2rem;
+              margin-top: 3rem;
+              line-height: 2.5rem;
+
+              @include md {
+                margin: 1rem;
+                font-size: 1.4rem;
+                margin-top: 0;
+              }
+              .numberdayviews {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+                .views {
+                  margin-right: 1rem;
+                }
+              }
+              .description {
+                max-height: 2rem;
+                overflow: hidden;
+              }
+              &.more {
+                max-height: 0;
+                overflow: 0;
+              }
+              .showBtn {
+                background: #ffffff;
+                color: black;
+                outline: 0;
+                height: 2rem;
+                padding: 0 0.5rem;
+                cursor: pointer;
+                font-size: 1.2rem;
+                border: 1px solid rgb(31, 31, 31);
+                border-radius: 100vw;
+                margin-top: 1rem;
+              }
+            }
+          }
+        }
+      }
+      .relatedVideos {
+        @include md {
+          margin-left: 75rem;
+          width: 50rem;
+          padding-right: 2.4rem;
+        }
+        .allcontent {
+          width: 100%;
+          @include md {
+            display: flex;
+          }
+          .content {
+            @include md {
+              // width: 75%;
+              height: 8rem;
+              width: 20rem;
+              margin-bottom: 3rem;
+            }
+            .thumbnail {
+              @include md {
+                // width: 100%;
+              }
+              .img {
+                @include md {
+                  height: 100%;
+                }
+              }
+            }
+            .time {
+              font-size: 1rem;
+              bottom: 1rem;
+              @include md {
+                bottom: -3rem;
+                font-size: 1rem;
+              }
+            }
+          }
+          .details {
+            @include md {
+              width: 25%;
+            }
+            .textContent {
+              .videoDetails {
+                .content {
+                  display: flex;
+                  .profileImg {
+                    @include md {
+                      display: none;
+                    }
+                  }
+                  .textInfo {
+                    @include md {
+                      padding-left: 1rem;
+                    }
+                    .title {
+                      font-size: 1.2rem;
+                      @include md {
+                        font-size: 1.4rem;
+                      }
+                    }
+                    .name {
+                      font-size: 1rem;
+                      @include md {
+                        font-size: 1.2rem;
+                      }
+                    }
+                    .viewsandYear {
+                      font-size: 1rem;
+                      @include md {
+                        font-size: 1.2rem;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
+  }
 }
