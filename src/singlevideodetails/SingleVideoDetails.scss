@@ -269,14 +269,15 @@
             @include md {
               // width: 75%;
               height: 8rem;
-              width: 20rem;
+              // width: 20rem;
               margin-bottom: 3rem;
             }
             .thumbnail {
               @include md {
-                // width: 100%;
+                width: 100%;
               }
               .img {
+                height: 100%;
                 @include md {
                   height: 100%;
                 }
@@ -286,7 +287,7 @@
               font-size: 1rem;
               bottom: 1rem;
               @include md {
-                bottom: -3rem;
+                bottom: -9rem;
                 font-size: 1rem;
               }
             }
@@ -301,12 +302,15 @@
                   display: flex;
                   .profileImg {
                     @include md {
-                      display: none;
+                      // display: none;
+                      margin-top: 8rem;
                     }
                   }
                   .textInfo {
                     @include md {
                       padding-left: 1rem;
+                      display: flex;
+                      margin-top: 8rem;
                     }
                     .title {
                       font-size: 1.2rem;
