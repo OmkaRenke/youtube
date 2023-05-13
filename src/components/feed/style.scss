@@ -23,6 +23,7 @@
       .scroll-div {
         width: 0;
         height: 100vh;
+        margin-top: -1rem;
         @include md {
           height: 50rem;
           width: 20rem;
@@ -30,6 +31,7 @@
           overflow-y: scroll;
           position: fixed;
           z-index: 2;
+          margin-top: 0;
         }
       }
     }

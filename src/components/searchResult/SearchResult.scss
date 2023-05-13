@@ -13,12 +13,17 @@
       position: absolute;
       width: 22.4rem;
       z-index: 1;
+      margin-top: -3rem;
+      @include md {
+        margin-top: 0;
+      }
 
       @include md {
         display: flex;
         position: relative;
         .scrolldiv {
           width: 0;
+
           @include md {
             height: 50rem;
             width: 20rem;
